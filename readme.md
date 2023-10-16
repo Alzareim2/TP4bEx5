@@ -73,3 +73,27 @@ Avec cette approche, vous obtiendrez la phrase "Bonjour tout le monde" de maniè
 ---
 
 Utilisez `StringBuilder` lorsque vous avez besoin de construire ou de modifier fréquemment des chaînes de caractères en Java.
+
+# Explication des méthodes Java utilisées
+
+### `String.chars()`
+
+La méthode `chars()` de la classe `String` transforme une chaîne de caractères en une série d'entiers. Cette série est ce qu'on appelle un "flux" en Java.
+
+**Qu'est-ce qu'un flux ?** Un flux (ou `Stream` en anglais) est comme une file d'éléments. Vous pouvez imaginer cela comme une chaîne de montage où chaque élément attend d'être traité.
+
+**Pourquoi utiliser `chars()` ?** Cette méthode est utile lorsque vous voulez travailler avec chaque caractère de la chaîne individuellement. Au lieu de manipuler directement la chaîne, vous travaillez avec un flux de ses caractères.
+
+### `Stream.map()`
+
+La méthode `map()` prend chaque élément d'un flux et le transforme selon une règle ou une fonction que vous spécifiez. Si vous avez une série de nombres et que vous voulez doubler chacun d'eux, `map()` est l'outil à utiliser.
+
+**Pourquoi utiliser `map()` ?** C'est la méthode à utiliser lorsque vous voulez effectuer une action ou une transformation spécifique sur chaque élément d'un flux. Dans l'exemple de l'ADN, nous l'avons utilisé pour transformer chaque caractère de la chaîne en une valeur de masse molaire.
+
+### `IntStream.sum()`
+
+`sum()` fait exactement ce que son nom suggère : elle ajoute tous les entiers d'un flux pour donner un total.
+
+**Pourquoi utiliser `sum()` ?** Lorsque vous avez une série d'entiers et que vous voulez connaître leur somme totale, utilisez cette méthode. Dans le cas de notre exemple sur l'ADN, après avoir transformé chaque caractère en sa masse molaire, nous avons utilisé `sum()` pour obtenir la masse molaire totale de la chaîne.
+
+---
