@@ -38,3 +38,38 @@ Pour la chaîne `"AAGT"`, la fonction renvoie `"TTCA"` car 'A' est complémentai
 ---
 
 N'hésitez pas à consulter la documentation Java officielle pour plus de détails
+
+
+# StringBuilder en Java
+
+`StringBuilder` est une classe en Java conçue pour manipuler et construire des chaînes de caractères de manière efficace.
+
+## Caractéristiques principales
+
+1. **Modifiable** : A la différence des chaînes (`String`) en Java qui sont immuables (ne peuvent pas être modifiées après leur création), un `StringBuilder` peut être changé autant de fois que vous le souhaitez sans créer de nouveaux objets en mémoire.
+
+2. **Performant** : Pour de nombreuses modifications sur une chaîne (ajouts, suppressions, insertions), utiliser `StringBuilder` est plus rapide et consomme moins de mémoire que d'utiliser directement des chaînes (`String`).
+
+3. **Méthodes courantes** :
+   - `append()`: Ajoute du texte à la fin du `StringBuilder`.
+   - `insert()`: Insère du texte à un indice spécifié.
+   - `delete()`: Supprime une partie du texte entre deux indices.
+   - `toString()`: Convertit le contenu du `StringBuilder` en une chaîne `String` normale.
+
+## Exemple d'utilisation
+
+Si vous souhaitez combiner plusieurs mots pour former une phrase :
+
+```java
+StringBuilder sb = new StringBuilder("Bonjour");
+sb.append(" tout");
+sb.append(" le");
+sb.append(" monde");
+String phrase = sb.toString();
+```
+
+Avec cette approche, vous obtiendrez la phrase "Bonjour tout le monde" de manière efficace.
+
+---
+
+Utilisez `StringBuilder` lorsque vous avez besoin de construire ou de modifier fréquemment des chaînes de caractères en Java.
